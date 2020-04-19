@@ -23,6 +23,7 @@ public class PartnerController {
         return ps.getPartnerById(id);
     }
 
+
     @PostMapping(path = "save")
     public MessageDTO savePartner(@RequestBody PartnerDTO data) {
         ps.savePartner(data);

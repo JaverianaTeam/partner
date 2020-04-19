@@ -18,18 +18,15 @@ public class PartnerDTO {
     private String queryEndpoint;
     private String notificationEndpoint;
 
-    public PartnerDTO(Integer partnerId, String nit, String name, Date creationDate, String email, String phone, String queryEndpoint, String notificationEndpoint) {
-        this.partnerId = partnerId;
-        this.nit = nit;
-        this.name = name;
-        this.creationDate = creationDate;
-        this.email = email;
-        this.phone = phone;
-        this.queryEndpoint = queryEndpoint;
-        this.notificationEndpoint = notificationEndpoint;
-    }
 
     public PartnerDTO(PartnerEntity pe) {
-
+        this.partnerId = pe.getPartnerId();
+        this.nit = pe.getNit();
+        this.name = pe.getName();
+        this.creationDate = pe.getCreationDate();
+        this.email = pe.getEmail();
+        this.phone = pe.getPhone();
+        this.queryEndpoint = pe.getQueryEndpoint();
+        this.notificationEndpoint = pe.getNotificationEndpoint();
     }
 }
